@@ -8,7 +8,7 @@
     <meta name="description"
         content="Expert Python web development services, building scalable and secure web applications using Django, Flask, and other Python frameworks.">
     <meta name="keywords"
-        content="Python back-end development, Python full-stack development, Flask, Django, Web application development, Back-end development, Mobile-first development">
+        content="Python back-end development, Python full-stack development, Flask, Django, Web application development, Back-end development">
     <meta name="author" content="Ashwani Kumar">
     <title>Ashwani Kumar | Portfolio</title>
     <!-- font icons -->
@@ -19,15 +19,11 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-        <div class="alert alert-success">
-            <strong>{{ message }}!</strong>
-        </div>
-        {% endfor %}
-    </ul>
-    {% endif %}
+    {% if messages %} {% for message in messages %} {% if message.tags %}
+    <script>
+        alert("{{ message }}");
+    </script>
+    {% endif %} {% endfor %} {% endif %}
     <header class="header">
         <div class="container">
             <ul class="social-icons pt-3">
@@ -100,9 +96,9 @@
                 <span class="line mb-5"></span>
                 <ul class="mt40 info list-unstyled">
                     <li><span>Birth-Date</span> : 14/12/1996</li>
-                    <li><span>Email</span> : ashwani844959@gmail.com</li>
+                    <li><span>Email</span> : technogyan375@gmail.com</li>
                     <li><span>Phone</span> : + (91) 8449592804</li>
-                    <li><span>Skype</span> : @ashwani </li>
+                    <!-- <li><span>Skype</span> : @ashwani </li> -->
                     <li><span>Address</span> : Shivalik Nagar Haridwar Uttarakhand India.</li>
                 </ul>
                 <ul class="social-icons pt-3">
@@ -289,6 +285,57 @@
 
     </section>
 
+    <section class="section bg-dark text-center">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="row ">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-alarm-clock icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">200</h1>
+                            <p class="text-light mb-1">Hours Worked</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-layers-alt icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">6</h1>
+                            <p class="text-light mb-1">Project Finished</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-face-smile icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">5</h1>
+                            <p class="text-light mb-1">Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-heart-broken icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">100</h1>
+                            <p class="text-light mb-1">Tea & Coffee Drinked</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio Section -->
     <section class="section bg-custom-gray" id="portfolio">
         <div class="container">
@@ -311,26 +358,26 @@
                 <div class="portfolio-container">
                     <div class="col-md-6 col-lg-4 web new">
                         <div class="portfolio-item">
-                            <img src="{% static 'assets/imgs/web-1.jpg' %}" class="img-fluid"
+                            <img src="{% static 'assets/imgs/techno.png' %}" class="img-fluid"
                                 alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
                             <div class="content-holder">
                                 <a class="img-popup" href="{% static 'assets/imgs/web-1.jpg' %}"></a>
                                 <div class="text-holder">
                                     <h6 class="title">WEB</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                    <p class="subtitle">Python Coding Blog</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 web new">
                         <div class="portfolio-item">
-                            <img src="{% static 'assets/imgs/web-2.jpg' %}" class="img-fluid"
+                            <img src="{% static 'assets/imgs/port.jpg' %}" class="img-fluid"
                                 alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
                             <div class="content-holder">
-                                <a class="img-popup" href="{% static 'assets/imgs/web-2.jpg' %}"></a>
+                                <a class="img-popup" href="{% static 'assets/imgs/port.jpg' %}"></a>
                                 <div class="text-holder">
                                     <h6 class="title">WEB</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                    <p class="subtitle">Dynamic Web Development</p>
                                 </div>
                             </div>
                         </div>
@@ -350,13 +397,13 @@
                     </div>
                     <div class="col-md-6 col-lg-4 web">
                         <div class="portfolio-item">
-                            <img src="{% static 'assets/imgs/web-4.jpg' %}" class="img-fluid"
+                            <img src="{% static 'assets/imgs/tour.jpg' %}" class="img-fluid"
                                 alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
                             <div class="content-holder">
-                                <a class="img-popup" href="{% static 'assets/imgs/web-4.jpg' %}"></a>
+                                <a class="img-popup" href="{% static 'assets/imgs/tour.jpg' %}"></a>
                                 <div class="text-holder">
                                     <h6 class="title">WEB</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                    <p class="subtitle">Django & Flask Webdevelopment</p>
                                 </div>
                             </div>
                         </div>
@@ -377,13 +424,13 @@
                     </div>
                     <div class="col-md-6 col-lg-4 web new">
                         <div class="portfolio-item">
-                            <img src="{% static 'assets/imgs/web-3.jpg' %}" class="img-fluid"
+                            <img src="{% static 'assets/imgs/dashboard.png' %}" class="img-fluid"
                                 alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
                             <div class="content-holder">
-                                <a class="img-popup" href="{% static 'assets/imgs/web-3.jpg' %}"></a>
+                                <a class="img-popup" href="{% static 'assets/imgs/dashboard.png' %}"></a>
                                 <div class="text-holder">
                                     <h6 class="title">WEB</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                    <p class="subtitle">Admin Dashboard Design</p>
                                 </div>
                             </div>
                         </div>
@@ -417,13 +464,13 @@
                     </div>
                     <div class="col-md-6 col-lg-4 branding new">
                         <div class="portfolio-item">
-                            <img src="{% static 'assets/imgs/branding-1.jpg' %}" class="img-fluid"
+                            <img src="{% static 'assets/imgs/custom.png' %}" class="img-fluid"
                                 alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
                             <div class="content-holder">
-                                <a class="img-popup" href="{% static 'assets/imgs/branding-1.jpg' %}"></a>
+                                <a class="img-popup" href="{% static 'assets/imgs/custom.png' %}"></a>
                                 <div class="text-holder">
-                                    <h6 class="title">BRANDING</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                    <h6 class="title">Ecommerce Website</h6>
+                                    <p class="subtitle">Customize Admin Panel</p>
                                 </div>
                             </div>
                         </div>
@@ -593,6 +640,30 @@
 
     </section>
 
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px">
+                <h5 class="fw-bold text-primary text-uppercase">Testimonial</h5>
+                <h2 class="mb-0">What Our Clients Say About Our Digital Services</h2>
+            </div>
+            <div class="testimonial-item bg-light my-4">
+                <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                    <img class="img-fluid rounded" src="{% static 'assets/imgs/testimonial-1.jpeg' %}"
+                        style="width: 200px; height: 200px" alt="testimonial" />
+                    <div class="ps-4 m-auto">
+                        <h4 class="text-primary mb-1">Atal Jambhulkar</h4>
+                        <small class="text-uppercase">SAP MM/WM/EWM Consultant</small>
+                    </div>
+                </div>
+                <div class="pt-4 pb-5 px-5">
+                    "My website is really well-designed! The balance between photos and text is beautiful, and
+                    everything is managed excellently. The browsing experience is smooth and engaging. Your work truly
+                    deserves appreciation – I really liked it!"
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="section contact" id="contact">
         <div id="map" class="map"></div>
@@ -601,17 +672,17 @@
                 <div class="col-lg-8">
                     <div class="contact-form-card">
                         <h4 class="contact-title">Sweet, that's me! Now it's your turn to say hi.</h4>
-                        <form action="{% url 'index' %}" method="post">
+                        <form name="myForm" action="{% url 'index' %}" onsubmit="return validateForm()" method="post">
                             {% csrf_token %}
                             <div class="form-group">
-                                <input class="form-control" type="text" name="name" placeholder="Name *" required>
+                                <input class="form-control" type="text" name="name" placeholder="Name *">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="email" name="email" placeholder="Email *" required>
+                                <input class="form-control" type="email" name="email" placeholder="Email *">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" name="message" placeholder="Message *" rows="7"
-                                    required></textarea>
+                                <textarea class="form-control" name="message" placeholder="Message *"
+                                    rows="7"></textarea>
                             </div>
                             <div class="form-group ">
                                 <button type="submit" class="form-control btn btn-primary">Send Message</button>
@@ -645,7 +716,7 @@
                                 <i class="ti-envelope icon-md"></i>
                             </div>
                             <div class="col-10">
-                                <h6 class="d-inline">Email :<br> <span class="text-muted">ashwani844959@gmail.com</span>
+                                <h6 class="d-inline">Email :<br> <span class="text-muted">technogyan375@gmail.com</span>
                                 </h6>
                             </div>
                         </div>
@@ -698,6 +769,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+    <script>
+        function validateForm() {
+            let name = document.forms["myForm"]["name"].value;
+            let email = document.forms["myForm"]["email"].value;
+            // let subject = document.forms["myForm"]["subject"].value;
+            let message = document.forms["myForm"]["message"].value;
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            } else if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            } else if (message == "") {
+                alert("Message must be filled out");
+                return false;
+            }
+        }
+    </script>
 
 </body>
 
