@@ -4,15 +4,22 @@ from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from ashwani.common_modules.mainServices import MainService
+from django.views.generic.base import TemplateView
 
+from .sitemaps import StaticViewSitemap 
+from django.contrib.sitemaps.views import sitemap
 
-
+sitemaps = {
+    'static': StaticViewSitemap,
+}
 
 admin.site.site_title = "Ashwani_Portfolio Admin"
 admin.site.site_header = "Ashwani_Portfolio Administration"
 admin.site.index_title = "Ashwani_Portfolio Administration"
 
 urlpatterns = [
+    path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('dashboard/', admin.site.urls),
     path('', include('users.urls')),
 ]
